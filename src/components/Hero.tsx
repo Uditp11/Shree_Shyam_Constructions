@@ -94,23 +94,29 @@ export default function Hero() {
             {t("hero.viewServices")}
           </motion.button>
         </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 3.5 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 rounded-full border-2 border-white/20 flex items-start justify-center p-1.5"
-          >
-            <motion.div className="w-1.5 h-3 rounded-full bg-white/40" />
-          </motion.div>
-        </motion.div>
       </div>
+
+      {/* Subtle scroll hint — positioned against the section, well below CTAs */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 3.5, duration: 1 }}
+        className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1.5"
+      >
+        <span className="text-white/20 text-[10px] md:text-[11px] tracking-[0.25em] uppercase">
+          Scroll to explore
+        </span>
+        <motion.svg
+          animate={{ y: [0, 5, 0], opacity: [0.4, 0.8, 0.4] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="w-3.5 h-3.5 md:w-4 md:h-4 text-white/20"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </motion.svg>
+      </motion.div>
     </section>
   );
 }
