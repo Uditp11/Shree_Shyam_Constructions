@@ -200,7 +200,7 @@ export default function Contact() {
               {/* Map */}
               <div className="rounded-xl overflow-hidden border border-gray-200 shadow-sm h-56 md:h-64">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093747!2d77.2090!3d28.6139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM2JzUwLjAiTiA3N8KwMTInMzIuNCJF!5e0!3m2!1sen!2sin!4v0"
+                  src="https://maps.app.goo.gl/aPvkVhqzTiXTNyYb6"
                   className="w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
                   loading="lazy"
                   title="Location Map"

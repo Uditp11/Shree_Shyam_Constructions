@@ -142,7 +142,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <FaMapMarkerAlt className="text-[var(--color-electric)] text-xs shrink-0 mt-1" />
-                <span className="text-white/50 text-sm">India</span>
+                <span className="text-white/50 text-sm">117, Janakpuri, Mala Road, Kota, Rajasthan, India - 324002</span>
               </li>
             </ul>
           </div>
