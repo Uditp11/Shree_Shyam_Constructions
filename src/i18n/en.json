@@ -1,0 +1,166 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "whyEpoxy": "Why Epoxy",
+    "academy": "Academy",
+    "gallery": "Gallery",
+    "process": "Process",
+    "contact": "Contact",
+    "getQuote": "Get Quote"
+  },
+  "hero": {
+    "headline": "From Epoxy Floors to Leak-Proof Roofs",
+    "headlineSub": "We Build & We Deliver",
+    "subheading": "Durable. Professional. Long-lasting solutions for industrial, commercial & residential spaces.",
+    "getQuote": "Get Free Quote",
+    "viewServices": "View Services"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Premium flooring & waterproofing solutions tailored to your needs",
+    "items": [
+      {
+        "title": "Industrial Flooring",
+        "description": "Heavy-duty epoxy flooring systems engineered for factories, warehouses, and industrial facilities with maximum durability."
+      },
+      {
+        "title": "Decorative Flooring",
+        "description": "Beautiful granular and decorative epoxy finishes that transform any commercial or residential space with style."
+      },
+      {
+        "title": "Car Parking Flooring",
+        "description": "Anti-skid, chemical-resistant parking floor coatings designed for high-traffic multi-level and basement parking areas."
+      },
+      {
+        "title": "Flake Flooring",
+        "description": "Vibrant, chip-based epoxy flooring with customizable color blends for showrooms, garages, and retail spaces."
+      },
+      {
+        "title": "Digital Paper Flooring",
+        "description": "Innovative digitally printed epoxy floors with custom patterns, logos, and artistic designs for unique interiors."
+      },
+      {
+        "title": "Waterproofing",
+        "description": "Complete waterproofing solutions for roofs, basements, and wet areas using premium-grade coatings and membranes."
+      },
+      {
+        "title": "Italian Flooring",
+        "description": "Luxurious Italian-style epoxy flooring with marble and stone-effect finishes for upscale residential and commercial projects."
+      },
+      {
+        "title": "Metallic Flooring",
+        "description": "Stunning metallic epoxy floors with swirling, three-dimensional effects creating a luxurious, one-of-a-kind finish."
+      },
+      {
+        "title": "3D Flooring",
+        "description": "Eye-catching 3D epoxy floors with photorealistic designs and depth effects that captivate and impress visitors."
+      }
+    ]
+  },
+  "features": {
+    "title": "Why Choose Epoxy?",
+    "subtitle": "The smart choice for modern flooring",
+    "items": [
+      {
+        "title": "High Durability",
+        "description": "Withstands heavy foot traffic, machinery, and impacts — built to last for decades."
+      },
+      {
+        "title": "Seamless Finish",
+        "description": "Smooth, joint-free surface that's easy to clean and maintains a pristine look."
+      },
+      {
+        "title": "Chemical Resistant",
+        "description": "Resists oils, acids, solvents, and chemicals — ideal for industrial environments."
+      },
+      {
+        "title": "Easy Maintenance",
+        "description": "Simple cleaning with minimal upkeep. No waxing, polishing, or special treatments needed."
+      },
+      {
+        "title": "Cost Effective",
+        "description": "Long lifespan and low maintenance costs make it the most economical flooring solution."
+      }
+    ]
+  },
+  "training": {
+    "title": "Training Academy",
+    "subtitle": "Learn & Earn",
+    "description": "Master the art of professional epoxy flooring and waterproofing with our hands-on training program.",
+    "points": [
+      "Learn epoxy flooring professionally from industry experts",
+      "Comprehensive skill-based training program",
+      "Start your own epoxy & waterproofing business",
+      "Hands-on practical sessions with real projects",
+      "Certificate upon successful completion"
+    ],
+    "cta": "Join Masterclass"
+  },
+  "gallery": {
+    "title": "Our Projects",
+    "subtitle": "Showcasing excellence in every project",
+    "filters": {
+      "all": "All",
+      "industrial": "Industrial",
+      "commercial": "Commercial",
+      "residential": "Residential"
+    },
+    "beforeAfter": "Before & After"
+  },
+  "process": {
+    "title": "Our Process",
+    "subtitle": "From inspection to perfection — a systematic approach",
+    "steps": [
+      {
+        "title": "Inspection",
+        "description": "Thorough assessment of the existing surface, environment conditions, and project requirements."
+      },
+      {
+        "title": "Surface Preparation",
+        "description": "Professional grinding, cleaning, and priming to ensure maximum coating adhesion."
+      },
+      {
+        "title": "Coating Application",
+        "description": "Precision application of premium epoxy coatings using industry-leading techniques."
+      },
+      {
+        "title": "Finishing",
+        "description": "Final top coat, quality inspection, and curing for a flawless, long-lasting result."
+      }
+    ]
+  },
+  "cta": {
+    "headline": "Build Strong. Build Smart.",
+    "subheading": "Ready to transform your space with premium flooring solutions?",
+    "callNow": "Call Now",
+    "getQuote": "Get Free Quote"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's discuss your project requirements",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "message": "Your Message",
+      "submit": "Send Message"
+    },
+    "info": {
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "addressValue": "India"
+    }
+  },
+  "footer": {
+    "about": "Shree Shyam Constructions is a trusted name in professional epoxy flooring and waterproofing solutions, delivering quality and durability since inception.",
+    "quickLinks": "Quick Links",
+    "ourServices": "Our Services",
+    "contactUs": "Contact Us",
+    "copyright": "© 2026 Shree Shyam Constructions. All rights reserved."
+  },
+  "loading": {
+    "tagline": "Building Excellence"
+  }
+}

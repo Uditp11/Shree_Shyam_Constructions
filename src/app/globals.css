@@ -1,26 +1,191 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-charcoal: #1E1E1E;
+  --color-steel: #4A4F54;
+  --color-silver: #C0C7CE;
+  --color-electric: #007BFF;
+  --color-electric-dark: #0056b3;
+  --color-offwhite: #F5F7FA;
+  --color-gold: #D4A843;
+  --color-gold-dark: #B8922E;
+
+  --font-sans: var(--font-heading), var(--font-body), system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #F5F7FA;
+  --foreground: #1E1E1E;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1E1E1E;
+}
+::-webkit-scrollbar-thumb {
+  background: #4A4F54;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #007BFF;
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #007BFF, #00d4ff);
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-dark {
+  background: rgba(30, 30, 30, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+}
+
+/* Industrial texture backgrounds */
+.bg-industrial {
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(0, 123, 255, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(192, 199, 206, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(0, 123, 255, 0.02) 0%, transparent 50%);
+}
+
+.bg-hero-gradient {
+  background: linear-gradient(135deg, #1E1E1E 0%, #2a2d32 40%, #1E1E1E 100%);
+}
+
+.bg-dots {
+  background-image: radial-gradient(circle, rgba(192, 199, 206, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Grid line pattern */
+.bg-grid {
+  background-image: 
+    linear-gradient(rgba(192, 199, 206, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(192, 199, 206, 0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Animated gradient blob */
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* Pulse ring */
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+/* Section padding utility */
+.section-padding {
+  padding: 5rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 7rem 2rem;
+  }
+}
+
+/* Epoxy shine effect */
+.epoxy-shine {
+  position: relative;
+  overflow: hidden;
+}
+.epoxy-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.05) 50%, transparent 60%);
+  animation: shimmer 4s infinite;
+}
+
+/* WhatsApp float */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
 }
