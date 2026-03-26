@@ -130,14 +130,14 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
                 <FaPhoneAlt className="text-[var(--color-electric)] text-xs shrink-0" />
-                <a href="tel:+919999999999" className="text-white/50 text-sm hover:text-white transition-colors">
-                  +91 999 999 9999
+                <a href="tel:+917014550073" className="text-white/50 text-sm hover:text-white transition-colors">
+                  +91-7014550073
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <FaEnvelope className="text-[var(--color-electric)] text-xs shrink-0" />
-                <a href="mailto:info@shreeshyam.com" className="text-white/50 text-sm hover:text-white transition-colors">
-                  info@shreeshyam.com
+                <a href="mailto:shreeshyamconstructions671@gmail.com" className="text-white/50 text-sm hover:text-white transition-colors break-all">
+                  shreeshyamconstructions671@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">

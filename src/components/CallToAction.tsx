@@ -38,7 +38,7 @@ export default function CallToAction() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <motion.a
-              href="tel:+919999999999"
+              href="tel:+917014550073"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               className="px-8 py-4 rounded-full bg-white text-[var(--color-electric)] font-bold text-base shadow-xl flex items-center gap-2 hover:bg-gray-50 transition-colors"
