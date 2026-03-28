@@ -5,17 +5,18 @@ import { useTranslation } from "@/i18n/LanguageContext";
 import SectionTitle from "./SectionTitle";
 import AnimatedSection from "./AnimatedSection";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const projects = [
-  { id: 1, category: "industrial", color: "from-blue-800 to-blue-950", label: "Industrial Epoxy Floor" },
-  { id: 2, category: "commercial", color: "from-emerald-800 to-emerald-950", label: "Commercial Showroom" },
-  { id: 3, category: "residential", color: "from-purple-800 to-purple-950", label: "Metallic Floor Design" },
-  { id: 4, category: "industrial", color: "from-slate-700 to-slate-900", label: "Warehouse Flooring" },
-  { id: 5, category: "commercial", color: "from-cyan-800 to-cyan-950", label: "Car Parking Floor" },
-  { id: 6, category: "residential", color: "from-amber-800 to-amber-950", label: "3D Floor Art" },
-  { id: 7, category: "industrial", color: "from-zinc-700 to-zinc-900", label: "Factory Floor Coating" },
-  { id: 8, category: "commercial", color: "from-indigo-800 to-indigo-950", label: "Office Flake Floor" },
-  { id: 9, category: "residential", color: "from-rose-800 to-rose-950", label: "Italian Style Floor" },
+  { id: 1, category: "industrial", image: "/pictures/HD_industrial_floor.png", label: "Industrial Epoxy Floor" },
+  { id: 2, category: "commercial", image: "/pictures/HD_Granule_floor.png", label: "Granule Floor" },
+  { id: 3, category: "residential", image: "/pictures/HD_metallic_floor.png", label: "Metallic Floor Design" },
+  { id: 4, category: "industrial", image: "/pictures/HD_Waterproof_floor.png", label: "Waterproof Flooring" },
+  { id: 5, category: "commercial", image: "/pictures/HD_car_parking_floor.png", label: "Car Parking Floor" },
+  { id: 6, category: "residential", image: "/pictures/HD_3d_floor.png", label: "3D Floor Art" },
+  { id: 7, category: "commercial", image: "/pictures/HD_digital_floor.png", label: "Digital Paper Floor" },
+  { id: 8, category: "commercial", image: "/pictures/HD_Flakes_floor.png", label: "Flake Floor" },
+  { id: 9, category: "residential", image: "/pictures/HD_italian_floor.png", label: "Italian Style Floor" },
 ];
 
 export default function Gallery() {
@@ -63,11 +64,14 @@ export default function Gallery() {
                 onClick={() => setSelectedProject(project.id)}
                 className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer"
               >
-                {/* Gradient placeholder */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.color}`}>
-                  <div className="absolute inset-0 bg-grid opacity-20" />
-                  <div className="absolute inset-0 bg-dots opacity-20" />
-                </div>
+                {/* Floor work image */}
+                <Image
+                  src={project.image}
+                  alt={project.label}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
 
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300">
@@ -107,29 +111,34 @@ export default function Gallery() {
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
-                className="relative max-w-3xl w-full aspect-video rounded-2xl overflow-hidden"
+                className="relative max-w-4xl w-full aspect-[4/3] rounded-2xl overflow-hidden"
                 onClick={(e) => e.stopPropagation()}
               >
                 {(() => {
                   const p = projects.find((x) => x.id === selectedProject);
                   return (
-                    <div className={`absolute inset-0 bg-gradient-to-br ${p?.color}`}>
-                      <div className="absolute inset-0 bg-grid opacity-20" />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="text-center">
-                          <p className="text-white text-2xl font-bold" style={{ fontFamily: "var(--font-heading)" }}>
-                            {p?.label}
-                          </p>
-                          <p className="text-white/60 capitalize mt-2">{p?.category}</p>
-                        </div>
+                    <>
+                      <Image
+                        src={p?.image || ""}
+                        alt={p?.label || ""}
+                        fill
+                        sizes="90vw"
+                        className="object-cover"
+                        priority
+                      />
+                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                        <p className="text-white text-2xl font-bold" style={{ fontFamily: "var(--font-heading)" }}>
+                          {p?.label}
+                        </p>
+                        <p className="text-white/60 capitalize mt-1">{p?.category}</p>
                       </div>
-                    </div>
+                    </>
                   );
                 })()}
                 {/* Close button */}
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+                  className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/40 flex items-center justify-center text-white hover:bg-black/60 transition-colors backdrop-blur-sm"
                 >
                   ✕
                 </button>
