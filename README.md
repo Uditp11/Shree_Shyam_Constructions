@@ -1,48 +1,48 @@
 # Shree Shyam Constructions Website
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.2-black?logo=next.js&logoColor=white)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-19.0-blue?logo=react&logoColor=white)](https://react.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.0-38bdf8?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-19.2-blue?logo=react&logoColor=white)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vercel](https://img.shields.io/badge/Deployed-Vercel-black?logo=vercel&logoColor=white)](https://shree-shyam-constructions.vercel.app/)
 
-A premium, modern corporate landing page and client lead-capture web application designed and built for **Shree Shyam Constructions** (a premier contracting business specializing in commercial, industrial, and residential epoxy flooring & waterproofing services).
+A landing page and quote request site built for **Shree Shyam Constructions**, a contracting business that does epoxy flooring and waterproofing for industrial, commercial and residential clients. The site is available in English and Hindi.
 
-**Live Demo:** [shree-shyam-constructions.vercel.app](https://shree-shyam-constructions.vercel.app/)
-
----
-
-## ✨ Features
-
-- **🌐 Client-Side Localization (i18n):** Complete English & Hindi bilingual translation support distributed seamlessly using the React Context API.
-- **⚡ Modern Responsive UI:** Crafted with Tailwind CSS v4, dynamic layouts, grid-based background designs, and elegant hover state responses.
-- **🎨 Visual Fluidity:** Integrated Framer Motion animations triggering viewport entry transitions (`fadeUp`, `fadeLeft`, `fadeRight`, `scaleUp`), a sleek page preloader/loader, and a custom scroll-progress indicator.
-- **📩 Serverless Lead Capture:** Fully functional, interactive quote request form integrated directly with the client's Gmail box via `emailjs-com` without needing a dedicated backend server.
-- **🎯 Specialized Showcase Sections:**
-  - **Services Grid:** Detailed, interactive cards for Industrial, Decorative, Flake, Digital Paper, Italian, Metallic, 3D Epoxy Floorings, and general Waterproofing.
-  - **Training Academy Masterclass:** Visual highlight of the "Learn & Earn" vocational program showing point-by-point details.
-  - **Interactive Gallery & Map:** Filterable project showcase and grayscale styled Google Maps location embed.
-  - **WhatsApp Chat API:** Quick-access floating action button pointing straight to the business communication channel.
+**Live site:** [shree-shyam-constructions.vercel.app](https://shree-shyam-constructions.vercel.app/)
 
 ---
 
-## 🛠️ Technology Stack
+## Features
 
-- **Framework:** Next.js 16.2 (App Router) & React 19.0
+- **English and Hindi:** A button in the navbar switches the site text between English and Hindi. Translations live in `src/i18n/en.json` and `src/i18n/hi.json` and are served through a React Context.
+- **Responsive layout:** Built with Tailwind CSS v4 and works on phone and desktop widths.
+- **Animations:** Framer Motion runs entry animations as sections scroll into view (`fadeUp`, `fadeDown`, `fadeLeft`, `fadeRight`, `scaleIn`). There is also a loading screen and a scroll progress bar.
+- **Quote request form:** The contact form sends the request by email through EmailJS (`@emailjs/browser`), so the site needs no backend server.
+- **Sections:**
+  - **Services:** Cards for Industrial, Decorative, Car Parking, Flake, Digital Paper, Italian, Metallic and 3D flooring, plus Waterproofing.
+  - **Training Academy:** The "Learn & Earn" training program, listed point by point.
+  - **Gallery and map:** A project gallery with Industrial, Commercial and Residential filters and a lightbox, and an embedded Google Map in grayscale.
+  - **WhatsApp:** A floating button that opens a WhatsApp chat with the business.
+
+---
+
+## Technology Stack
+
+- **Framework:** Next.js 16.2 (App Router) and React 19.2
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS v4, PostCSS, React Icons
 - **Animation:** Framer Motion
-- **Integration:** EmailJS, Google Maps API, WhatsApp Link API
+- **Integrations:** EmailJS, Google Maps embed, WhatsApp click to chat link
 - **Deployment:** Vercel
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
-- Node.js (v18.0 or newer)
-- npm or yarn
+- Node.js 20.9 or newer (required by Next.js 16)
+- npm
 
 ### Installation
 
@@ -57,7 +57,7 @@ A premium, modern corporate landing page and client lead-capture web application
    npm install
    ```
 
-3. Create a `.env.local` file in the root directory and populate it with your EmailJS credentials:
+3. Create a `.env.local` file in the root directory with your EmailJS credentials:
    ```env
    NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_emailjs_service_id
    NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
@@ -69,51 +69,47 @@ A premium, modern corporate landing page and client lead-capture web application
    npm run dev
    ```
 
-5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Build for Production
+### Production build
 
-Generate the optimized production build:
 ```bash
 npm run build
-```
-
-To preview the production build locally:
-```bash
 npm run start
 ```
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
-├── public/                 # Static assets (images, logos, favicon)
-│   └── pictures/           # High-definition flooring showcases
+├── public/
+│   └── pictures/           # Gallery photos of finished floors
 ├── src/
-│   ├── app/                # Next.js App Router (layout, global styles, pages)
-│   ├── components/         # Reusable React components (Navbar, Hero, Services, Contact, etc.)
-│   └── i18n/               # Translation dictionary configuration and React Context
-│       ├── en.json         # English translations
-│       ├── hi.json         # Hindi translations
+│   ├── app/                # Next.js App Router (layout, global styles, page)
+│   ├── components/         # Page sections (Navbar, Hero, Services, Contact, and so on)
+│   └── i18n/               # Translations and the language React Context
+│       ├── en.json         # English
+│       ├── hi.json         # Hindi
 │       └── LanguageContext.tsx
-├── postcss.config.mjs
-├── tailwind.config.js      # CSS configuration
-└── tsconfig.json           # TypeScript configuration
+├── eslint.config.mjs
+├── next.config.ts
+├── postcss.config.mjs      # Tailwind CSS v4 through PostCSS
+└── tsconfig.json
 ```
 
 ---
 
-## ✉️ Lead Dispatch (EmailJS) Setup
+## EmailJS Setup
 
-This project uses EmailJS for sending user inquiries straight to Gmail. To set it up:
+The contact form sends each quote request to the business inbox through EmailJS. To set it up:
 1. Register on [EmailJS](https://www.emailjs.com/).
-2. Create an Email Service pointing to Gmail.
-3. Create an Email Template matching the form inputs (`from_name`, `phone`, `reply_to`, `message`).
+2. Create an Email Service connected to the inbox that should receive requests.
+3. Create an Email Template that uses the form fields `from_name`, `phone`, `reply_to` and `message`.
 4. Paste the generated IDs into your `.env.local` file.
 
 ---
 
-## ⚖️ License
+## License
 
-Distributed under the MIT License. Developed for Shree Shyam Constructions by [Udit Parihar](mailto:uditparihar11@gmail.com).
+Distributed under the MIT License. See [LICENSE](LICENSE). Developed for Shree Shyam Constructions by [Udit Parihar](mailto:uditparihar11@gmail.com).
