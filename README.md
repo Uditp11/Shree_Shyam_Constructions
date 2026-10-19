@@ -112,4 +112,4 @@ The contact form sends each quote request to the business inbox through EmailJS.
 
 ## License
 
-Distributed under the MIT License. Developed for Shree Shyam Constructions by [Udit Parihar](mailto:uditparihar11@gmail.com).
+Distributed under the MIT License. See [LICENSE](LICENSE). Developed for Shree Shyam Constructions by [Udit Parihar](mailto:uditparihar11@gmail.com).
